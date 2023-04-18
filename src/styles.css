@@ -48,14 +48,7 @@ a:hover{
       width: 1170px;
     }
   }
-  /* :root{
-    --main-color: #2196F3;
-    --main-color-alt: #1787E0;
-    --main-transition: 0.3s;
-    --main-padding-top: 100px;
-    --main-padding-bottom: 100px;
-    --section-background: #ececec;
-  } */
+
 
 /* End Global Rules */
 .ngx-pagination .current{
