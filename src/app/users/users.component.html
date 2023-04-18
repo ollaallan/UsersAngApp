@@ -1,0 +1,15 @@
+
+<div class="users">
+    <h2 class="mainTitle">List of Users</h2>
+    <div class="container">
+        <div (click)="goToInfo(u)" class="box" *ngFor="let u of usersList | paginate: { itemsPerPage: 4, currentPage: p };let i=index">
+            <img [src]="u.avatar" [alt]="u.first_name" />
+            <h2>{{u.first_name}} {{u.last_name}}</h2>
+            <p>Email: {{u.email}}</p>
+        </div>
+     
+    </div>
+    <div class="pagination">
+          <pagination-controls (pageChange)="p =$event"></pagination-controls>
+    </div>
+</div>

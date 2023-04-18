@@ -1,0 +1,45 @@
+.users{
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.users .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 40px;
+}
+.users .container .box{
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    border-radius: 6px;
+    transform: translateY(0);
+    transition: 0.3s;
+}
+
+.users .container .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+.users .container .box img{
+    width: 100%;
+    border-radius: 5px;
+    }
+.box h2{
+    padding: 10px;
+    font-size: 1.3rem;
+}
+.box p{
+    padding: 10px;
+    color: #666;
+}
+
+
+  .pagination{
+    margin-top: 70px;
+  }
+  pagination-controls{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ngx-pagination .current{
+    background: aqua !important;
+  }
+  /* /////////////////// */

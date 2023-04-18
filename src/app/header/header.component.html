@@ -1,0 +1,32 @@
+<header>
+    <div *ngIf="loaderS.isLoading | async " class="loader">
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </div>
+    <div class="container">
+        <nav class="">
+            <div class="logo">
+                <strong>Users </strong>
+                <strong>Logo</strong>
+            </div>
+           
+            <ul>
+                <li><a id="home" [routerLink]="['users']">Home</a> </li>
+                <li><input id="search" type="text" placeholder="Enter Your Id" class="form-control" [(ngModel)]="searchId" (input)="searchMyId()" />
+                    <div class="dropdown__menu">
+                        <ul class="underline">
+                            <li *ngFor="let u of filteredUsers">
+                                <a [routerLink]="['userInfo',u.id]">{{u.first_name}} {{u.last_name}}</a>
+                                
+                            </li>
+                            
+                        </ul>
+                    </div>
+    
+            </li>
+            </ul>
+            
+            
+          </nav>
+    </div>
+</header>
+

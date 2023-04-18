@@ -1,0 +1,157 @@
+/* You can add global styles to this file, and also import other style files */
+/* Start Global Rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+
+@media (min-width:768px){
+    .container{
+      width: 750px;
+    }
+  }
+  
+  /* Medium */
+  
+  @media (min-width:992px){
+    .container{
+      width: 970px;
+    }
+  }
+  
+  /* Large */
+  
+  @media (min-width:1200px){
+    .container{
+      width: 1170px;
+    }
+  }
+  /* :root{
+    --main-color: #2196F3;
+    --main-color-alt: #1787E0;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+  } */
+
+/* End Global Rules */
+.ngx-pagination .current{
+  background: aqua !important;
+}
+
+.dropdown__menu{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 0px;
+  border-radius: 2px;
+  color: black;
+  background-color: white;
+  z-index: -100;
+  opacity: 0;
+/* background-image: linear-gradient(120deg,#dee2e640 20%,#adb5bd57 40%,#17a2b845 50%); */
+transition: z-index 0.3s 0.4s;
+}
+
+input#search:focus + .dropdown__menu{
+width: 150px;
+opacity: 1;
+z-index: 99;
+}
+.mdc-linear-progress__bar-inner {
+  border-color: aqua !important;
+}
+/* ////////////////////////////////////// */
+.mainTitle{
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid black;
+  padding: 10px;
+  font-size: 30px;
+  width: fit-content;
+  margin: 0 auto 50px;
+  position: relative;
+  background-color: #fff;
+  transition: color 0.3s 0.2s, border 0.3s 0.2s;
+}
+.mainTitle:hover{
+  z-index: 1;
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.5s;
+}
+.mainTitle:hover::before {
+  z-index: -1;
+  animation: left-move 0.5s linear forwards;
+}
+.mainTitle::before {
+  left: -30px;
+}
+.mainTitle::before, .mainTitle::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: aqua;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.mainTitle:hover::after {
+  z-index: -1;
+  animation: right-move 0.5s linear forwards;
+}
+.mainTitle::after {
+  right: -30px;
+}
+
+@keyframes left-move {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 55%;
+    height: 100%;
+  }
+}
+@keyframes right-move {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 55%;
+    height: 100%;
+  }
+}
+/* //////////////////// */
